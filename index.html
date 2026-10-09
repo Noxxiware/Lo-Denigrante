@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MC PvP Rankings</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">⚔</div>
+            <div>
+                <h1>Lo Denigrante</h1>
+                <span>RANKINGS</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <div class="menu-title rankings-toggle" id="rankings-toggle">
+                <span>▼</span>
+                RANKINGS
+            </div>
+
+            <div class="rankings-menu" id="rankings-menu">
+
+                <a href="#" class="menu-item active" data-mode="Overall">
+                    <img src="icons/overall.svg" class="menu-icon" alt="">
+                    Overall
+                </a>
+
+                <a href="#" class="menu-item" data-mode="Vanilla">
+                    <img src="icons/vanilla.svg" class="menu-icon" alt="">
+                    Vanilla
+                </a>
+
+                <a href="#" class="menu-item" data-mode="UHC">
+                    <img src="icons/uhc.svg" class="menu-icon" alt="">
+                    UHC
+                </a>
+
+                <a href="#" class="menu-item" data-mode="Pot">
+                    <img src="icons/pot.svg" class="menu-icon" alt="">
+                    Pot
+                </a>
+
+                <a href="#" class="menu-item" data-mode="NethOP">
+                    <img src="icons/nethop.svg" class="menu-icon" alt="">
+                    NethOP
+                </a>
+
+                <a href="#" class="menu-item" data-mode="SMP">
+                    <img src="icons/smp.svg" class="menu-icon" alt="">
+                    SMP
+                </a>
+
+                <a href="#" class="menu-item" data-mode="Sword">
+                    <img src="icons/sword.svg" class="menu-icon" alt="">
+                    Sword
+                </a>
+
+                <a href="#" class="menu-item" data-mode="Axe">
+                    <img src="icons/axe.svg" class="menu-icon" alt="">
+                    Axe
+                </a>
+
+                <a href="#" class="menu-item" data-mode="Mace">
+                    <img src="icons/mace.svg" class="menu-icon" alt="">
+                    Mace
+                </a>
+
+            </div>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <span>Lo Denigrante</span>
+            <small>Community ranking</small>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div class="page-info">
+
+                <h2>Overall Ranking</h2>
+            
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+
+        <section class="content">
+
+            <!-- BUSCADOR -->
+
+            <div class="toolbar">
+
+                <div class="search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        placeholder="Search player..."
+                    >
+
+                </div>
+
+                <div class="toolbar-buttons">
+
+                    <button class="info-button" id="info-button">
+                        ⓘ Information
+                    </button>
+
+                    <button class="filter-button" id="filter-button">
+                        ☰ Filter
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLA -->
+
+            <div class="ranking-container">
+
+                <div class="ranking-header">
+
+                    <div class="rank-column">
+                        #
+                    </div>
+
+                    <div class="player-column">
+                        Player
+                    </div>
+
+                    <div class="region-column">
+                        Region
+                    </div>
+
+                    <div class="tier-column">
+                        Tier
+                    </div>
+
+                    <div class="points-column">
+                        Points
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kit-info-page" id="kit-info-page"></div>
+
+        </section>
+
+    </main>
+
+            <!-- VENTANA DEL JUGADOR -->
+
+        <div class="player-modal" id="player-modal">
+
+            <div class="player-modal-content">
+
+                <button class="modal-close" id="modal-close">
+                    ×
+                </button>
+
+                <!-- ESPACIO PARA LA SKIN -->
+
+                <div class="skin-placeholder">
+                    <img id="modal-player-skin" src="" alt="Skin del jugador">
+                </div>
+
+                <!-- INFORMACIÓN DEL JUGADOR -->
+
+                <h2 id="modal-player-name">
+                    Player
+                </h2>
+
+                <div class="modal-title" id="modal-player-title">
+                    Combat Novice
+                </div>
+
+                <div class="modal-region" id="modal-player-region">
+                    🇨🇱 Chile
+                </div>
+
+                <div class="modal-overall" id="modal-player-overall">
+                    <span class="overall-position">1.</span>
+                    <img src="icons/overall.svg" class="modal-overall-icon" alt="">
+                    <span class="overall-text">Overall (0 points)</span>
+                </div>
+
+                <!-- TIERS -->
+
+                <div class="modal-tiers" id="modal-tiers">
+
+                </div>
+
+            </div>
+
+        </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="info.js"></script>
+
+</body>
+
+</html>
